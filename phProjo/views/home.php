@@ -1,9 +1,7 @@
-		<div id="webdevelopper">
-			<span>Vue : Roman // Controller : Roman</span>
-		</div>
+<div class="webdevelopper"> Vue : Roman // Controller : Roman</div>
 
-		<section>
-			<h1>home 1</h1>
-			<p>page d'accueil</p>
-			<p>redirige vers l'inscription ou la connexion</p>
-		</section>
+<section>
+<h1>Page de la plebe</h1>
+<p>Page d'index surtout <em>inserez informations utiles ici</em></p>
+<p>Redirige vers l'inscription ou la connexion</p>
+</section>
