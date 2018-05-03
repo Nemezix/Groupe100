@@ -1,6 +1,4 @@
-<div id="webdevelopper">
-<span style="color:pink">Vue : Arthur // Controller : Arthur</span>
-</div>
+<div class="webdevelopper">Vue : Arthur // Controller : Arthur</div>
 
 <section>
 <h1>Bienvenue a la page de type Profil</h1>
