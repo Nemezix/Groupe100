@@ -1,5 +1,5 @@
 		<div id="webdevelopper">
-			<span>Vue : Arthur // Controller : Arthur&Roman</span>
+			<span>Vue : Arthur // Controller : Arthur and Roman</span>
 		</div>
 
 		<section>
