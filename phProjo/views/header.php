@@ -9,7 +9,7 @@
 		</head>
 	<body>
 		<header>
-			<div id="header">
+			<div class="header">
 				<nav>
 					<ul>
 						<?php if(empty($_SESSION['authentified']))
