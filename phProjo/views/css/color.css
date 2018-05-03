@@ -1,6 +1,7 @@
 /* personnal code */
 em{
 	color: lightgrey;
+}
 body{
 	background-color: #665847;
 }
@@ -16,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #FF9900; 
 }
 
+span{
+	color: pink;
+}
+
 p{
 	margin: 10px;
 }
@@ -28,7 +33,7 @@ a:hover, a:focus {
 	color: #FF9900;;
 }
 
-#footer{
+.footer{
 	background-color: #3D362D;
 	color: #FF9900;
 	text-align: center;
@@ -36,28 +41,28 @@ a:hover, a:focus {
 	padding: 10px;
 }
 
-#header{
+.header{
 	background-color: #3D362D;
 	color: #FF9900;
 }
 
-#admin{
+.admin{
 	background-color: lightblue;
 }
 
-#coach{
+.coach{
 	background-color: red;
 	color: white;
 }
 
-#webdevelopper{
+.webdevelopper{
 	background-color: #FF9900;
 	color: #FEFFFD;
 	text-align: center;
 	margin: 10px;
 	padding: 10px;
 }
-/*#3D362D
-#FEFFFD
-#665847
-#FF9900*/
+/*#3D362D - Dark Brown
+#FEFFFD - White
+#665847 - Light Brown
+#FF9900 - Orange */ 
