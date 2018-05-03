@@ -1,6 +1,4 @@
-<div id="webdevelopper">
-<span style="color:pink">Vue: Mauvaise // Controller: Existe pas</span>
-</div>
+<div class="webdevelopper">Vue: Mauvaise // Controller: Existe pas</div>
 
 <section>
 <h1>Recuperation de mot de passe</h1>
