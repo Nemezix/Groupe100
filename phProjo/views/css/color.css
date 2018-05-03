@@ -4,12 +4,14 @@ body{
 }
 
 section {
-	background-color: #FEFFFD;
+	background-color: #3D362D;
+	color: #FF9900;
 	padding: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	background-color: #FF9900; 
+	background-color: #3D362D;
+	color: #FF9900; 
 }
 
 p{
