@@ -1,4 +1,4 @@
-		<div id="webdevelopper">
+		<div class="webdevelopper">
 			<span>Vue : Arthur // Controller : Arthur</span>
 		</div>
 		
