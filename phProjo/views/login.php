@@ -1,6 +1,4 @@
-<div id="webdevelopper">
-<span style="color:pink">Vue : Roman // Controller : Roman</span>
-</div>
+<div class="webdevelopper">Vue : Roman // Controller : Roman</div>
 
 <section>
 <h1>Connection</h1>
