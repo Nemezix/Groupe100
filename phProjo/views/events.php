@@ -1,4 +1,4 @@
-		<div id="webdevelopper">
+		<div class="webdevelopper">
 			<span>Vue : Arthur // Controller : Arthur and Roman</span>
 		</div>
 
@@ -8,4 +8,4 @@
 			<p>redirige vers : hub, profil, training, events, members.php et logout</p>
 			<!-- must be hidden on authentification / if admin -->	
 			<div id="admin">Espace d'administration pour les MODÉRATEURS</div>
-		</section>
+    		</section>
