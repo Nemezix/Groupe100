@@ -1,5 +1,5 @@
 		<footer>
-			<div id="webdevelopper">
+			<div class="webdevelopper">
 				<span>Zone de test</span>
 				<br />
 				<span>
@@ -8,8 +8,8 @@
 				</span>
 			</div>
 
-			<div id="footer">
-				<span style="color:rgb(255,153,0);">Projet web - Développé en retard par le Groupe 100</span>
+			<div class="footer">
+				<span>Projet web - Développé en retard par le Groupe 100</span>
 			</div>
 		</footer>
 	</body>
