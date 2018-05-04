@@ -14,7 +14,7 @@
 <h3>Changement de mot de passe:</h3>
 <p><label for="newpwd">Nouveau mot de passe: </label><input name="newpwd" type="password" /><label for="newpwd_confirm">Confirmez le mot de passe: </label><input name="newpwd_confirm" type="password" /></p>
 <p><input type="submit" value="Enregistrer les modifications" /> <input type="reset" value="Reinitialiser les champs" /></p>
-<figure><img title="Ameno Dorime" src="../images/ameno.jpg" alt="GenericGroup100image" />
+<figure><img title="Ameno Dorime" src="images/ameno.jpg" alt="GenericGroup100image" />
 <figcaption>Ameno Dorime</figcaption>
 </figure>
 <p><label for="newpp">Changer de photo de profil: </label><input accept="image/*" name="newpp" type="file" /></p>
