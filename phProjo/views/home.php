@@ -2,6 +2,7 @@
 
 <section>
 <h1>Page de la plebe</h1>
-<p>Page d'index surtout <em>inserez informations utiles ici</em></p>
+<p>Page d'index surtout <br/>
+<em>inserez informations utiles ici</em></p>
 <p>Redirige vers l'inscription ou la connexion</p>
 </section>
