@@ -1,7 +1,7 @@
 <div class="webdevelopper">Vue : Roman // Controller : Roman</div>
 
 <section>
-<h1><span style="color:pink">Inscription</span></h1>
+<h1>Inscription</h1>
 <form id="registerForm" action="rempliscafdp" method="post">
 <p><label for="name">Nom: </label> <input name="name" required="" type="text" placeholder="Dupont" />
 <label for="surname"> Prenom: </label> <input name="surname" required="" type="text" placeholder="Jacques" /><br/>
