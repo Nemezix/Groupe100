@@ -15,7 +15,7 @@
 						<?php if(empty($_SESSION['authentified']))
 							{
 								echo
-								'<li><a href="index.php?action=home">vers le home</a></li>';
+								'<li><a href="index.php?action=home">Accueil</a></li>';
 							} 
 						?>
 
