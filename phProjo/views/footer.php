@@ -8,9 +8,7 @@
 				</span>
 			</div>
 
-			<div class="footer">
-				<span>Projet web - Développé en retard par le Groupe 100</span>
-			</div>
+			<div class="footer">Projet web - Développé en retard par le Groupe 100</div>
 		</footer>
 	</body>
 </html>
