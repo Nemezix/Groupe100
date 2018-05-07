@@ -8,9 +8,11 @@ define('CONTROLLERS', 'controllers/');
 
 #autloading CLASS
 function chargerClasse($classe){
-	require_once('models/'.$classe.'class.php');
+	require_once('models/'.$classe.'.class.php');
 }
 spl_autoload_register('chargerClasse');
+
+$db = Db::getInstance();
 
 #require HEADER
 require_once(VIEWS.'header.php');
@@ -31,7 +33,7 @@ switch($action){
 	
 	case 'login' :
 		require_once(CONTROLLERS.'LoginController.php');
-		$controller = new loginController();
+		$controller = new loginController($db);
 	break;
 
 	case 'logout' :
@@ -41,7 +43,7 @@ switch($action){
 	#HUB access and contents
 	case 'hub' : 
 		require_once(CONTROLLERS.'HubController.php');
-		$controller = new hubController();
+		$controller = new hubController($db);
 	break;
 	
 	case 'profil' :
