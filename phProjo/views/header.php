@@ -25,7 +25,7 @@
 								'<li><a href="index.php?action=hub">Acceuil</a></li>
 								<li><a href="index.php?action=profil">Profil</a></li>
 								<li><a href="index.php?action=training">Entrainements</a></li>
-								<li><a href="index.php?action=events">vers Évènements</a></li>
+								<li><a href="index.php?action=events">Évènements</a></li>
 								<li><a href="index.php?action=members">Membres</a></li>';
 							} 
 						?>
@@ -37,8 +37,14 @@
 								<li><a href="index.php?action=register">Inscription</a></li>';
 							}
 							else{
+								if(isset($_SESSION['surname'])){
+									echo
+									'<li><a>Connecté autant que '.$_SESSION['surname'].'.</a></li>
+									<li><a href="index.php?action=logout">Déconnection</a></li>';
+								}else{
 								echo
 								'<li><a href="index.php?action=logout">Déconnection</a></li>';
+								}
 							} 
 						?>
 					</ul>

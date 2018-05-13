@@ -21,7 +21,7 @@ class HubController{
 			die();
 		}
 
-		var_dump($this->_db->select_member('lakeke@hotmail.com'));
+		var_dump($this->_db->select_member('test@gmail.com'));
 
 		#require home.php
 		require_once(VIEWS.'hub.php');
