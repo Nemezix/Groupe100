@@ -17,6 +17,10 @@ class TrainingController{
 			die();
 		}
 
+		$user = Db::getInstance()->select_member($_SESSION['login']);
+
+		var_dump($user);
+
 		#require home.php
 		require_once(VIEWS.'training.php');
 

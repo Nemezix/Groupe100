@@ -3,6 +3,7 @@ em{
 	color: lightgrey;
 }
 body{
+
 	background-color: #665847;
 }
 
@@ -14,7 +15,7 @@ section {
 
 h1, h2, h3, h4, h5, h6 {
 	background-color: #3D362D;
-	color: #FF9900; 
+	color: #FF9900;
 }
 
 span{
@@ -36,9 +37,6 @@ a:hover, a:focus {
 .footer{
 	background-color: #3D362D;
 	color: #FF9900;
-	text-align: center;
-	margin-top: 10px;
-	padding: 10px;
 }
 
 .header{
@@ -61,6 +59,16 @@ a:hover, a:focus {
 	text-align: center;
 	margin: 10px;
 	padding: 10px;
+}
+.note{
+	background-color: #FF9900;
+	color: #FF0000;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+.centered{
+	text-align: center;
 }
 /*#3D362D - Dark Brown
 #FEFFFD - White

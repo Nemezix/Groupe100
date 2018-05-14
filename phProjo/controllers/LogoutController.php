@@ -11,7 +11,7 @@ class LogoutController{
 		#main CODE on LogoutController
 
 		#exiting connection for USER
-		$_SESSION = array();
+		session_destroy();
 
 		#kicking out unlogged user to HOME
 		header('location: index.php?action=home');
