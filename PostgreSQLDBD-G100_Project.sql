@@ -4,13 +4,13 @@ CREATE TABLE members (
     firstname varchar(50) NOT NULL,
     surname varchar(50)   NOT NULL,
     numtel varchar(20)   NOT NULL,
-    mail varchar(100)   NOT NULL,
+    mail varchar(100)  NOT NULL,
     adress varchar(255)   NOT NULL,
     bankid varchar(29)   NOT NULL,
     trainingid int  DEFAULT 1 NOT NULL,
     rights mediumint  DEFAULT 0 NOT NULL,
     title varchar(30)   NULL,
-    pswd varchar(30)   NOT NULL
+    pswd varchar(255)   NOT NULL
 );
 
 
@@ -83,6 +83,8 @@ ALTER TABLE events_going ADD UNIQUE (eventid, memberid);
 
 ALTER TABLE fees_paid ADD UNIQUE (payment_year, memberid);
 
+ALTER TABLE members ADD UNIQUE (mail);
+
 ALTER TABLE fees_paid ADD CONSTRAINT fk_FEE_PAID_payment_year FOREIGN KEY(payment_year)
 REFERENCES fee_years (payment_year);
 
@@ -110,3 +112,5 @@ REFERENCES trainings (trainingid);
 ALTER TABLE trainings_subscribed ADD CONSTRAINT fk_TRAINING_SUBSCRIBED_memberid FOREIGN KEY(memberid)
 REFERENCES members (memberid);
 
+INSERT INTO members (firstname, surname, numtel, mail, adress, bankid, pswd, rights)
+VALUES ('John', 'Doe', 0470522199, 'test@gmail.com', 'Mactembourg, rue du Momentum, 420', 'BE990029382938', '$2y$10$1Y3J/a67QuZbwqPtZtW3h.cwQDyN4vIn4RJWfY1jnl/yvSN1NqQ/y',4 )
