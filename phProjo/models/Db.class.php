@@ -118,7 +118,7 @@ class Db
         $ud->bindValue(4, $member->mail);
         $ud->bindValue(5, $member->adress);
         $ud->bindValue(6, $member->bankid);
-        $ud->bindValue(7, password_hash($member->pswd, PASSWORD_DEFAULT));
+        $ud->bindValue(7, $member->pswd);
         $ud->bindValue(8, $member->memberid);
         $ud->execute();
 

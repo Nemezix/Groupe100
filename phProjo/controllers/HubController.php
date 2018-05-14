@@ -21,12 +21,9 @@ class HubController{
 			die();
 		}
 
-		/* var_dump($this->_db->select_member($_SESSION['login'])); */
 		$user = $this->_db->select_member($_SESSION['login']);
 
 		var_dump($user);
-
-		echo $user->getMemberid();
 
 		#require home.php
 		require_once(VIEWS.'hub.php');

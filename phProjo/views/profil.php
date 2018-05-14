@@ -13,21 +13,21 @@
 	 <label for="surname">Prenom: </label>
 	 <input name="surname" type="text" value="<?php echo $user->surname; ?>" /></p>
 
-	<h3>Contacts</h3>
+	<h2>Contacts</h2>
 
 	<p><label for="numtel">Numero de telephone: </label>
 	<input name="numtel" type="tel" value="<?php echo $user->numtel; ?>" /><br/> 
 	<label for="email">Adresse mail: </label>
 	<input name="email" size="25" type="email" value="<?php echo $user->mail; ?>" /></p>
 
-	<h3>Informations Civiles:</h3>
+	<h2>Informations Civiles:</h2>
 
 	<p><label for="adress">Adresse: </label>
-	<input name="adress" size="80" type="text" value="<?php echo $user->adress; ?>" /><br/> <?php echo $user->adress; ?>
+	<input name="adress" size="80" type="text" value="<?php echo $user->adress; ?>" /><br/>
 	<label for="bankid">Compte bancaire: </label>
 	<input name="bankid" size="30" type="text" value="<?php echo $user->bankid; ?>" /></p>
 
-	<h3>Changement de mot de passe:</h3>
+	<h2>Changement de mot de passe:</h2>
 
 	<p><label for="newpwd">Nouveau mot de passe: </label>
 	<input name="newpwd" type="password" /><br/>
@@ -46,7 +46,7 @@
 
 	<p><label for="newpp">Changer de photo de profil: </label>
 	<input accept="image/*" name="newpp" type="file" /></p>
-	
+
 	</form>
 
 </section>

@@ -37,6 +37,7 @@ class LoginController{
 
 					header('location: index.php?action=hub');
 					die();
+					
 				}else{
 
 					$notification = 'Erreur de connextion : vous navez pas encore les droits de connection.';

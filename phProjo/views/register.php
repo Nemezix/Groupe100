@@ -27,7 +27,8 @@
 				<input max="29" name="bankid" required="" size="30" type="text" placeholder="BE** **** **** ****" /><br/>
 
 				<label for="pwd"> Mot de passe: </label>
-				<input name="pwd" required="" type="password" /><label for="pwd_confirm"> Confirmez le mot de passe: </label><input name="pwd_confirm" required="" type="password" /> <br />
+				<input name="pwd" required="" type="password" />
+				<label for="pwd_confirm"> Confirmez le mot de passe: </label><input name="pwd_confirm" required="" type="password" /> <br />
 
 				<label for="pp"> Votre photo de profil </label>
 				<input accept="image/*" name="pp"  type="file" /><br />
