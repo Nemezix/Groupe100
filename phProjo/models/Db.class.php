@@ -125,5 +125,40 @@ class Db
         return true;
 
     }
+
+    public function submit_event($event){
+
+        $query = 'INSERT INTO events (title, description, price, event_date, localisation, photoURL) VALUES(?, ?, ?, ?, ?, ?)';
+        $insert = $this->_db->prepare($query);
+        $insert->bindValue(1,$event['title']);
+        $insert->bindValue(2,$event['description']);
+        $insert->bindValue(3,$event['price']);
+        $insert->bindValue(4,$event['event_date']);
+        $insert->bindValue(5,$event['localisation']);
+        $insert->bindValue(6,$event['photo']);
+
+        $insert->execute();
+
+        $query = 'SELECT eventid FROM events WHERE title=?';
+        $select = $this->_db->prepare($query);
+        $select->bindValue(1,$event['title']);
+        $select->execute();
+
+        $select = $select->fetch();
+
+        return $select;
+    }
+
+    public function event_add_driveUrl($event){
+
+        $query = 'UPDATE events SET driveURL = ? WHERE eventid = ?';
+        $pdt = $this->_db->prepare($query);
+        $pdt->bindValue(1, $event->drive_url);
+        $pdt->bindValue(2, $event->eventid);
+
+        $pdt->execute();
+
+        return true;
+    }
 }
 ?>

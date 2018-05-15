@@ -21,6 +21,20 @@ class EventsController{
 
 		var_dump($user);
 
+		if(isset($_POST['submitEvent'])){
+
+			if(empty($_POST['localisation'])){
+				$_POST['localisation'] = "";
+			}
+
+			if(empty($_POST['photo'])){
+				$_POST['photo']="views/images/ameno.jpg";
+			}
+
+
+			Db::getInstance()->submit_event($_POST);
+		}
+
 		#require home.php
 		require_once(VIEWS.'events.php');
 
