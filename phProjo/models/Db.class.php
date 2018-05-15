@@ -160,5 +160,20 @@ class Db
 
         return true;
     }
+
+    public function select_all_members(){
+
+        $query ='SELECT * FROM members';
+        $ps = $this->_db->prepare($query);
+        $ps->execute();
+
+        while($row = $ps->fetch()){
+
+            $array[] = new Member($row->memberid, $row->firstname, $row->surname, $row->numtel, $row->mail, $row->adress, $row->bankid, $row->trainingid, $row->rights, $row->title, $row->pswd);
+        }
+
+        return $array;
+
+    }
 }
 ?>

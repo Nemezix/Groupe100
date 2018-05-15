@@ -21,6 +21,9 @@ class MembersController{
 
 		$user = Db::getInstance()->select_member($_SESSION['login']);
 		var_dump($user);
+
+		$allusers = Db::getInstance()->select_all_members();
+		var_dump($allusers);
 		
 		#require home.php
 		require_once(VIEWS.'members.php');

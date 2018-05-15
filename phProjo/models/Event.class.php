@@ -12,13 +12,15 @@ class Event{
 	private $drive_url;
 	private $localisation;
 
-	public function __construct($eventid, $title, $description, $price, $event_date){
+	public function __construct($eventid, $title, $description, $price, $event_date, $localisation, $photo_url){
 
 		$this->eventid = $eventid;
 		$this->title = $title;
 		$this->description = $description;
 		$this->price = $price;
 		$this->event_date = $event_date;
+		$this->localisation = $localisation;
+		$this->photo_url = $photo_url;
 
 	}
 

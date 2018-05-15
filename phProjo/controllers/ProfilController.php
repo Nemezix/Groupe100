@@ -44,7 +44,14 @@ class ProfilController{
 		var_dump($user);
 
 		#require home.php
-		require_once(VIEWS.'profil.php');
+		if (!empty($_GET['modify']) AND ($user->rights > 1)){
+			$member = Db::getInstance()->select_member($_GET['modify']);
+			require_once(VIEWS.'profil_modify.php');
+		}
+		else{
+			require_once(VIEWS.'profil.php');
+		}
+
 
 	}
 
