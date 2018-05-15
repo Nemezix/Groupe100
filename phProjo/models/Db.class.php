@@ -110,7 +110,7 @@ class Db
 
     public function update_member($member){
 
-        $query = 'UPDATE members SET firstname = ?, surname = ?, numtel = ?, mail = ?, adress = ?, bankid = ?, pswd =? WHERE memberid = ?';
+        $query = 'UPDATE members SET firstname = ?, surname = ?, numtel = ?, mail = ?, adress = ?, bankid = ?, rights =?, pswd =? WHERE memberid = ?';
         $ud = $this->_db->prepare($query);
         $ud->bindValue(1, $member->firstname);
         $ud->bindValue(2, $member->surname);
@@ -118,13 +118,28 @@ class Db
         $ud->bindValue(4, $member->mail);
         $ud->bindValue(5, $member->adress);
         $ud->bindValue(6, $member->bankid);
-        $ud->bindValue(7, $member->pswd);
-        $ud->bindValue(8, $member->memberid);
+        $ud->bindValue(7, $member->rights);
+        $ud->bindValue(8, $member->pswd);
+        $ud->bindValue(9, $member->memberid);
         $ud->execute();
 
         return true;
 
     }
+
+
+    public function update_title($member){
+
+        $query = 'UPDATE members SET title = ? WHERE memberid = ?';
+        $qr = $this->_db->prepare($query);
+        $qr->bindValue(1, $member->title);
+        $qr->bindValue(2, $member->memberid);
+        $qr->execute();
+
+        return true;
+    }
+
+
 
     public function submit_event($event){
 
@@ -174,6 +189,42 @@ class Db
 
         return $array;
 
+    }
+
+   public function select_all_events(){
+
+        $query = 'SELECT * FROM events';
+        $ps = $this->_db->prepare($query);
+        $ps->execute();
+
+        while($row = $ps->fetch()){
+
+            $array[] = new Event($row->eventid, $row->title, $row->description, $row->price, $row->event_date, $row->photoURL, $row->driveURL, $row->localisation);
+        }
+
+        return $array;
+    }
+
+    public function select_event($eventid){
+
+        $query = 'SELECT title, description, photoURL, driveURL, price, event_date, localisation from events WHERE eventid=?';
+        $se = $this->_db->prepare($query);
+        $se->bindValue(1, $eventid);
+        $se->execute();
+
+        $se = $se->fetch(PDO::FETCH_BOTH);
+
+        $event_title = $se[0];
+        $event_description = $se[1];
+        $event_photoURL = $se[2];
+        $event_driveURL = $se[3];
+        $event_price = $se[4];
+        $event_date = $se[5];
+        $event_localisation = $se[6];
+
+        $event = new Event( $eventid, $event_title, $event_description, $event_price, $event_date, $event_photoURL, $event_driveURL, $event_localisation);
+
+        return $event;
     }
 }
 ?>

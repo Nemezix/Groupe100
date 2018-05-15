@@ -2,26 +2,26 @@
 
 class Event{
 	
-	private $eventid;
-	private $title;
-	private $description;
-	private $price;
-	private $event_date;
-	private $past;
-	private $photo_url;
-	private $drive_url;
-	private $localisation;
+	public $eventid;
+	public $title;
+	public $description;
+	public $price;
+	public $event_date;
+	public $past;
+	public $photo_url;
+	public $drive_url;
+	public $localisation;
 
-	public function __construct($eventid, $title, $description, $price, $event_date, $localisation, $photo_url){
-
+	public function __construct($eventid, $title, $description, $price, $event_date, $photo_url, $drive_url, $localisation){
+		
 		$this->eventid = $eventid;
 		$this->title = $title;
 		$this->description = $description;
 		$this->price = $price;
 		$this->event_date = $event_date;
-		$this->localisation = $localisation;
 		$this->photo_url = $photo_url;
-
+		$this->drive_url = $drive_url;
+		$this->localisation = $localisation;
 	}
 
 	public function setTitle($title){
@@ -65,6 +65,34 @@ class Event{
 		return $this->localisation;
 	}
 
+	#getters
+	public function getEventid(){
+		return $this->eventid;
+	}
+	public function getTitle(){
+		return $this->title;
+	}
+	public function getDescription(){
+		return $this->description;
+	}
+	public function getPrice(){
+		return $this->price;
+	}
+	public function getEvent_date(){
+		return $this->event_date;
+	}
+	public function getPast(){
+		return $this->past;
+	}
+	public function getPhoto_url(){
+		return $this->photo_url;
+	}
+	public function getDrive_url(){
+		return $this->drive_url;
+	}
+	public function getLocalisation(){
+		return $this->localisation;
+	}
 
 
 }

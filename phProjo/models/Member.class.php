@@ -76,6 +76,11 @@ class Member{
 		return $this->pswd;
 	}
 
+	public function setRights($rights){
+		$this->rights = $rights;
+		
+	}
+
 	/* #getters
 	public function getMemberid(){
 		return $this->hmemberid;

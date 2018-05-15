@@ -19,7 +19,6 @@ class ProfilController{
 		
 
 		$user = Db::getInstance()->select_member($_SESSION['login']);
-		var_dump($user);
 
 
 		
@@ -41,11 +40,26 @@ class ProfilController{
 		}
 
 		$user = Db::getInstance()->select_member($user->mail);
-		var_dump($user);
+
+
 
 		#require home.php
-		if (!empty($_GET['modify']) AND ($user->rights > 1)){
+		if (isset($_GET['modify']) AND ($user->rights > 1)){
 			$member = Db::getInstance()->select_member($_GET['modify']);
+
+			if(isset($_POST['modifySubmit'])){
+				$update_member = $member;
+
+				$update_member->rights = $_POST['rightsModify'];
+				$update_member->title = $_POST['titleModify'];
+
+
+				Db::getInstance()->update_member($update_member);
+				Db::getInstance()->update_title($update_member);
+
+				$member = Db::getInstance()->select_member($member->mail);
+			}
+
 			require_once(VIEWS.'profil_modify.php');
 		}
 		else{

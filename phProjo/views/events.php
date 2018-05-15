@@ -1,9 +1,21 @@
 		<div class="webdevelopper">Vue : Arthur // Controller : Arthur and Roman</div>
 
 		<section>
-			<h1>Events</h1>
-			<p>Liste des évènements</p>
-			<p>Redirige vers : hub, profil, training, events, members.php et logout</p>
+			<h1 class="centered">Events</h1>
+			<p class="centered">Liste des évènements</p>
+
+			<?php
+					foreach($listevents as $i => $events){
+						echo '<br /><section class="list_events">
+								<div><img title="Event" src="'.$events->getPhoto_URL().'"alt="" height="60" width="60" /></div>
+								
+								<div><h5><a href="index.php?action=events&event='.$events->eventid.'">'.$events->getTitle().'</a></h5> 
+								Le '.$events->getEvent_date().' à '.$events->getLocalisation().'</div>
+								
+								<div>'.$events->getPrice().' euros</div>
+							</section><br />'; 
+					} 
+				?>
 
 			<?php if ($user->rights > 1){?>
 

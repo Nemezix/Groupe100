@@ -18,8 +18,7 @@ class EventsController{
 		}
 
 		$user = Db::getInstance()->select_member($_SESSION['login']);
-
-		var_dump($user);
+		$listevents = Db::getInstance()->select_all_events();
 
 		if(isset($_POST['submitEvent'])){
 
@@ -35,8 +34,13 @@ class EventsController{
 			Db::getInstance()->submit_event($_POST);
 		}
 
-		#require home.php
-		require_once(VIEWS.'events.php');
+		if (isset($_GET['event'])){
+			$event = Db::getInstance()->select_event($_GET['event']);
+			require_once(VIEWS.'event.php');
+		}else{
+			require_once(VIEWS.'events.php');
+		}
+		
 
 	}
 
